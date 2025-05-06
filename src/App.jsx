@@ -14,7 +14,7 @@ const App = () => {
       <div
   className={`fixed lg:static top-0 ${
     slider ? "-left-0" : "-left-full"
-  } w-[80%] md:w-[50%] lg:w-full h-full overflow-y-scroll col-span-1 p-8 border-2 transition-all`}
+  } w-[80%] md:w-[50%] lg:w-full h-full overflow-y-scroll col-span-1 p-8 border-r transition-all`}
 >
         <div className='text-center p-8 text-black'>
           <h1 className='uppercase font-bold tracking-[4px]'>Logo</h1>
