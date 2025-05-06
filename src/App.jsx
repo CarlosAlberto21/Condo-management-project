@@ -1,12 +1,21 @@
 import React from 'react'
-import { RiDashboardLine, RiCalendar2Fill, RiPaypalLine, RiAdminLine, RiLogoutBoxFill} from 'react-icons/ri'
+import { RiDashboardLine, RiCalendar2Fill, RiPaypalLine, RiAdminLine, RiLogoutBoxFill, RiMenLine, RiMenu3Fill, RiCloseLine} from 'react-icons/ri'
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import imgB from "./assets/building.svg"
+import { useState } from 'react'; 
 
 const App = () => {
+  const [slider, setSidebar] = useState(false);
+  const handleSidebar =() =>{
+    setSidebar(!slider);
+  }
   return (
     <div className='min-h-screen grid grid-cols-1  lg:grid-cols-6'>
-      <div className='col-span-1 p-8 border-r-amber-300'>
+      <div
+  className={`fixed lg:static top-0 ${
+    slider ? "-left-0" : "-left-full"
+  } w-[80%] md:w-[50%] lg:w-full h-full overflow-y-scroll col-span-1 p-8 border-2 transition-all`}
+>
         <div className='text-center p-8 text-black'>
           <h1 className='uppercase font-bold tracking-[4px]'>Logo</h1>
         </div>
@@ -75,6 +84,10 @@ const App = () => {
          
             
       </div>
+      <button onClick={handleSidebar} className='absolute bottom-4 right-4 p-2 text-white rounded-full text-2xl bg-gray-400'>
+        
+        {slider ? <RiCloseLine/> : <RiMenu3Fill/>}
+      </button>
       <div className='col-span-5'></div>
     </div>
   )
