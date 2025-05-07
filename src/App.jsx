@@ -12,13 +12,11 @@ const App = () => {
   return (
     <div className='min-h-screen grid grid-cols-1  lg:grid-cols-6'>
       <div
-  className={`fixed lg:static top-0 ${
+  className={`fixed bg-white lg:static top-0 ${
     slider ? "-left-0" : "-left-full"
-<<<<<<< HEAD
-  } w-[80%] md:w-[50%] lg:w-full h-full overflow-y-scroll col-span-1 p-8 border-r transition-all`}
-=======
-  } w-[80%] z-50 md:w-[50%] lg:w-full h-full  col-span-1 p-8 transition-all`}
->>>>>>> 6df87f1 (Pagos)
+
+  } z-50 w-[80%] md:w-[50%]  lg:w-full h-full col-span-1 p-8 border-r transition-all`}
+
 >
         <div className='text-center p-8 text-black'>
           <h1 className='uppercase font-bold tracking-[4px]'>Logo</h1>
@@ -103,7 +101,7 @@ const App = () => {
             </div>
           </form>
           <nav className='w-full md:[60%] lg:w-[70%] flex justify-center md:justify-end'>
-            <ul className='flex items-center gap-4'>
+            <ul className='hidden sm:flex items-center gap-4 '>
               <li>
                 <a href="">
                   <RiNotification3Line className='text-xl'/>
@@ -125,8 +123,8 @@ const App = () => {
             
           </div>
           {/*Buscador*/}
-          <div className='grid grid-cols-4 gap-4 items-center'>
-            <form action="" className='col-span-2'>
+          <div className='grid grid-cols-2 lg:grid-cols-4  gap-4 items-center'>
+            <form action="" className=''>
               <div className='relative'>
                 <RiSearchLine className='absolute left-1 top-3 text-amber-400'/>
                 <input type="text"className='bg-white py-2 pl-8 pr-4 outline-none w-full'
@@ -152,8 +150,8 @@ const App = () => {
             </form>
           </div>
           {/*Cards*/}
-          <div className='mt-8 grid grid-cols-4 gap-4'>
-            <div className='bg-white flex flex-col justify-center col-span-2 p-3'>
+          <div className='mt-8 grid grid-cols-1 lg:grid-cols-4 gap-4'>
+            <div className='bg-white flex flex-col justify-center  p-3'>
                 <h2 className='text-amber-400 opacity-40 text-2xl'>Pago</h2>
                 <p className='text-6xl'>200$</p>
             </div>
